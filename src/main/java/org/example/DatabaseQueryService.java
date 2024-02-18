@@ -19,8 +19,8 @@ public class DatabaseQueryService {
 
         try (Statement statement = Database.getInstance().getConnection().createStatement();
              ResultSet resultSet = statement.executeQuery(
-                     new Scanner(Paths.get("C:/Users/user/IdeaProjects/" +
-                             "JDBC/src/main/sql/find_longest_project.sql")).useDelimiter(";").next())) {
+                     new Scanner(Paths.get(System.getProperty("user.dir") +
+                             "/src/main/sql/find_longest_project.sql")).useDelimiter(";").next())) {
 
             while (resultSet.next()) {
                 LongestProject project = new LongestProject();
@@ -42,8 +42,8 @@ public class DatabaseQueryService {
 
         try (Statement statement = Database.getInstance().getConnection().createStatement();
              ResultSet resultSet = statement.executeQuery(
-                     new Scanner(Paths.get("C:/Users/user/IdeaProjects/" +
-                             "JDBC/src/main/sql/find_max_projects_client.sql")).useDelimiter(";").next())) {
+                     new Scanner(Paths.get(System.getProperty("user.dir") +
+                             "/src/main/sql/find_max_projects_client.sql")).useDelimiter(";").next())) {
 
             while (resultSet.next()) {
                 MaxProjectCountClient client = new MaxProjectCountClient();
@@ -66,8 +66,8 @@ public class DatabaseQueryService {
 
         try (Statement statement = Database.getInstance().getConnection().createStatement();
              ResultSet resultSet = statement.executeQuery(
-                     new Scanner(Paths.get("C:/Users/user/IdeaProjects/" +
-                             "JDBC/src/main/sql/find_max_salary_worker.sql")).useDelimiter(";").next())) {
+                     new Scanner(Paths.get(System.getProperty("user.dir") +
+                             "/src/main/sql/find_max_salary_worker.sql")).useDelimiter(";").next())) {
 
             while (resultSet.next()) {
                 MaxSalaryWorker salary = new MaxSalaryWorker();
@@ -89,8 +89,8 @@ public class DatabaseQueryService {
 
         try (Statement statement = Database.getInstance().getConnection().createStatement();
              ResultSet resultSet = statement.executeQuery(
-                     new Scanner(Paths.get("C:/Users/user/IdeaProjects/" +
-                             "JDBC/src/main/sql/find_youngest_eldest_workers.sql")).useDelimiter(";").next())) {
+                     new Scanner(Paths.get(System.getProperty("user.dir") +
+                             "/src/main/sql/find_youngest_eldest_workers.sql")).useDelimiter(";").next())) {
 
             while (resultSet.next()) {
                 YoungestEldestWokers worker = new YoungestEldestWokers();
@@ -114,8 +114,8 @@ public class DatabaseQueryService {
 
         try (Statement statement = Database.getInstance().getConnection().createStatement();
              ResultSet resultSet = statement.executeQuery(
-                     new Scanner(Paths.get("C:/Users/user/IdeaProjects/" +
-                             "JDBC/src/main/sql/print_project_prices.sql")).useDelimiter(";").next())) {
+                     new Scanner(Paths.get(System.getProperty("user.dir") +
+                             "/src/main/sql/print_project_prices.sql")).useDelimiter(";").next())) {
 
             while (resultSet.next()) {
                 ProjectPrices price = new ProjectPrices();
